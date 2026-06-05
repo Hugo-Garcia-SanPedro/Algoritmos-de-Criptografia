@@ -3,6 +3,22 @@
 # 05 - 06 - 2026
 # Crear una biblioteca de funciones que realicen operaciones utilizadas frecuentemente en la criptografía 
 
+# Funcion que calcula el modulo entre 2 numeros solicitados al usuario
+def calcular_Modulo():
+    # Solicitamos los datos al usuario
+    print("Introduce A: A mod B.")
+    a = input()
+    print("Introduce B: A mod B.")
+    b = input()
+
+    # Nos aseguramos que las variables sean numericas
+    a = int(a)
+    b = int(b)
+
+    # Se calcula el modulo entre ambos numeros
+    resultado = a % b
+    print("El resultado es ", resultado)
+
 # Funcion que crea el menu para seleccionar los diferentes algoritmos
 def crear_Menu():
     # Pedimos al usuario que introduzca una de las opciones
@@ -21,7 +37,8 @@ def crear_Menu():
     # Estructura switch para el menu
     match opcion:
         case 'a':
-            print("Se ha elegido la opcion A.")
+            print("Se ha elegido la opcion A. Calcular el modulo de 2 numeros.")
+            calcular_Modulo()
             return
         case 'b':
             print("Se ha elegido la opcion B.")
